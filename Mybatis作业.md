@@ -107,9 +107,9 @@ INSERT INTO `sys_user` VALUES ('3', '20003', 'Ming', '1900 McCarthy Boulevard ST
 1. 在自己本地`MySql`数据库中根据上述建表语句初始化数据库
 1. 使用Spring + Mybatis，请注意`不是SpringMVC`
 1. sql需写在xxxMapper.xml中
-1. 开发`List<OrderLineQueryResult> selectOrderLinesByCondition(OrderLineQueryContition condition);`方法，用以根据传入条件动态查询订单行数据。查询条件包含`订单编号(模糊)、订单行号(模糊)、物料编码(模糊)、物料名称(模糊)、订单创建人id、订单客户id`。查询结果包含`订单编号、客户名称、客户地址、订单备注、订单创建人、订单行号、物料编码、物料名称、单价、数量、行总价`
-1. 开发`User insertUser(User user);`方法，用以创建一个新用户，注意返回值中要返回用户ID
-1. 开发`User updateUser(User user);`方法，用以根据ID更新一个用户信息
+1. 开发`List<OrderLineQueryResult> selectOrderLinesByCondition(OrderLineQueryCondition condition);`方法，用以根据传入条件动态查询订单行数据。查询条件包含`订单编号(模糊)、订单行号、物料编码(模糊)、物料名称(模糊)、订单创建人id、订单客户id`。查询结果包含`订单编号、客户名称、客户地址、订单备注、订单创建人、订单行号、物料编码、物料名称、单价、数量、行总价`
+1. 开发`int insertUser(User user);`方法，用以创建一个新用户，注意返回值中要返回用户ID
+1. 开发`int updateUser(User user);`方法，用以根据ID更新一个用户信息
 1. 开发`int deleteUser(Long userId);`方法，用以根据ID删除一个用户信息，注意返回值是被删除数据的数量
 1. 分别调用上述方法，并打印所有执行结果的返回值并截图，放入根目录中。注意如果方法返回值是个对象则需要重写`toString()`方法，输出所有内涵成员变量的值。
 1. 将项目及运行截图上传至码云，将工程地址填入考试系统中。
